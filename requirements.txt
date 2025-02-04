@@ -1,0 +1,13 @@
+Flask
+Flask-Cors
+pandas
+mysql-connector
+vanna
+numpy
+ollama
+random
+json
+re
+os
+hashlib
+datatime

@@ -1,0 +1,221 @@
+﻿
+.header {
+    display: none;
+}
+
+.footer {
+    display: none;
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+.chat-message {
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.user-message {
+    background-color: #e0e0e0; /* 使用者訊息背景色 */
+    color: #000;
+    padding: 8px 12px;
+    border-radius: 15px 15px 0 15px;
+    max-width: 70%;
+    align-self: flex-end; /* 右側對齊 */
+    text-align: left;
+}
+
+.bot-message {
+    background-color: #28a745; /* 機器人訊息背景色 */
+    color: white;
+    padding: 8px 12px;
+    border-radius: 15px 15px 15px 0;
+    max-width: 100%;
+    align-self: flex-start; /* 左側對齊 */
+    text-align: left;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1500px; /* 設置最大寬度 */
+    margin: 0 auto; /* 讓容器居中 */
+}
+
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* 訊息之間的間距 */
+    padding: 10px;
+    max-height: calc(100vh - 150px); /* 確保有足夠空間顯示訊息和輸入框 */
+    overflow-y: auto;
+    width: 1000px;
+}
+
+
+
+.input-group {
+    display: flex;
+    width: 100%;
+    max-width: 1000px; /* 跟隨容器最大寬度 */
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    background-color: #f8f9fa;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+    .input-group input[type="text"] {
+        flex-grow: 1;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .input-group button {
+        margin-left: 10px;
+        padding: 10px;
+        background-color: #28a745; /* 綠色按鈕 */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+.test-response {
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    gap: 5px; /* 每個氣泡之間的間距 */
+    align-items: flex-start; /* 確保泡泡框從左側對齊 */
+}
+
+.test-message {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px; /* 調整內邊距以降低高度 */
+    border-radius: 8px; /* 減少圓角以更接近資料列 */
+    text-align: left; /* 左對齊文字，像資料列 */
+    cursor: pointer;
+    transition: transform 0.3s;
+    width: 100%; /* 保持寬度一致 */
+    height: 30px; /* 設置固定高度 */
+    display: flex;
+    align-items: center; /* 垂直置中內容 */
+    font-size: 14px; /* 調整字體大小以適應高度 */
+}
+
+    .test-message:hover {
+        transform: scale(1.05); /* 懸停效果 */
+    }
+
+/* 模態視窗樣式 */
+.modal {
+    overflow-x: auto; /* 啟用橫向滾動條 */
+    display: none; /* 初始隱藏 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 1000px;
+    height: 1000px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#modal-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#modal-description {
+    margin: 15px 0;
+}
+
+#modal-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.parse-button {
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    www margin-top: 5px;
+    font-size: 12px;
+}
+
+    .parse-button:hover {
+        background-color: #gray;
+    }
+
+table {
+    min-width: 100%; /* 設置表格的最小寬度，確保當內容過多時能夠超出容器 */
+    border-collapse: collapse; /* 合併邊框 */
+}
+th, td {
+    border: 1px solid #000; /* 表格的單元格邊框 */
+    padding: 8px; /* 單元格內部間距 */
+}
+th {
+    background-color: #b0c4de;
+}
+
+.total {
+    font-weight: bold;
+}
+.table-container {
+    overflow-x: auto; /* 啟用橫向滾動條 */
+    max-width: 100%; /* 設置容器的最大寬度 */
+    white-space: nowrap; /* 確保表格不會自動換行 */
+    border: 1px solid #ddd; /* 可選：添加容器邊框 */
+}
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .styled-table th, .styled-table td {
+        padding: 8px 12px;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+
+    .styled-table th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+
+    .styled-table tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }

@@ -1,0 +1,11 @@
+question,sql
+尋找資料欄位裡跟機台當機相關的問題,"SELECT * FROM Rootcauses
+                  WHERE D4_DESC LIKE '%機台當機%' OR
+                        D4_ROOTCAUSE LIKE '%機台當機%' OR
+                        D4_ROOTCAUSEESC LIKE '%機台當機%' OR
+                        D4_WHY1ESC LIKE '%機台當機%' OR
+                        D4_WHY2ESC LIKE '%機台當機%' OR
+                        D4_WHY3ESC LIKE '%機台當機%' OR
+                        D4_WHY4ESC LIKE '%機台當機%' OR
+                        D4_WHY5ESC LIKE '%機台當機%'"
+
